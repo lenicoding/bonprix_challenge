@@ -1,0 +1,44 @@
+[
+    {
+        "id": 906855,
+        "title": "Strickkleid mit Bindeband",
+        "price": {
+            "value": 23.99,
+            "currency": "€"
+        },
+        "imageUrl": "https://image01.bonprix.de/assets/275x385/1692190166/23120919-ledODpTJ.jpg",
+        "description": "Modernes Strickkleid mit Ballon Ärmeln",
+        "isAvailable": true,
+        "variants": [
+            {
+                "id": 906855,
+                "color": "grau meliert",
+                "imageUrl": "https://image01.bonprix.de/assets/275x385/1692190166/23120919-ledODpTJ.jpg",
+                "isAvailable": true
+            },
+            {
+                "id": 953099,
+                "color": "schwarz",
+                "imageUrl": "https://image01.bonprix.de/assets/275x385/1692190099/23122048-j0pv69LB.jpg",
+                "isAvailable": false
+            },
+            {
+                "id": 935416,
+                "color": "kastanienbraun",
+                "imageUrl": "https://image01.bonprix.de/assets/275x385/1600856915/20167389-2HSkctsd.jpg",
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 932877,
+        "title": "Loose Fit Schlupfhose, Straight",
+        "price": {
+            "value": 37.99,
+            "currency": "€"
+        },
+        "imageUrl": "https://image01.bonprix.de/assets/275x385/1568788775/19227355-fbfUTxDQ.jpg",
+        "description": "Sportliche Schlupfhose mit elastischem Bund und Cargo-Taschen",
+        "isAvailable": true
+    }
+]

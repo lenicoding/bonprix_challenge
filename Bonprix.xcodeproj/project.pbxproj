@@ -8,17 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		EA6EF5D62B2DF3D5008A7FFF /* BonprixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5D52B2DF3D5008A7FFF /* BonprixApp.swift */; };
-		EA6EF5D82B2DF3D5008A7FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5D72B2DF3D5008A7FFF /* ContentView.swift */; };
 		EA6EF5DA2B2DF3D9008A7FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6EF5D92B2DF3D9008A7FFF /* Assets.xcassets */; };
 		EA6EF5DD2B2DF3D9008A7FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6EF5DC2B2DF3D9008A7FFF /* Preview Assets.xcassets */; };
+		EA6EF5E42B2DF419008A7FFF /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = EA6EF5E32B2DF419008A7FFF /* products.json */; };
+		EA6EF5E72B2DF463008A7FFF /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5E62B2DF463008A7FFF /* ProductsRepository.swift */; };
+		EA6EF5E92B2DF487008A7FFF /* BasketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5E82B2DF487008A7FFF /* BasketRepository.swift */; };
+		EA6EF5F22B2DFA93008A7FFF /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5F12B2DFA93008A7FFF /* Products.swift */; };
+		EAF405422B2E241C00EE4C95 /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF405412B2E241C00EE4C95 /* ProductsInteractor.swift */; };
+		EAF405462B2E248E00EE4C95 /* ProductOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF405452B2E248E00EE4C95 /* ProductOverviewViewModel.swift */; };
+		EAF405482B2E24FE00EE4C95 /* ProductOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF405472B2E24FE00EE4C95 /* ProductOverviewView.swift */; };
+		EAF4054A2B2E252700EE4C95 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF405492B2E252700EE4C95 /* ProductDetailView.swift */; };
+		EAF4054C2B2E2A5200EE4C95 /* FavoriteProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4054B2B2E2A5200EE4C95 /* FavoriteProductsRepository.swift */; };
+		EAF4054F2B2E2B3000EE4C95 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4054E2B2E2B3000EE4C95 /* ProductDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA6EF5D22B2DF3D5008A7FFF /* Bonprix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonprix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6EF5D52B2DF3D5008A7FFF /* BonprixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonprixApp.swift; sourceTree = "<group>"; };
-		EA6EF5D72B2DF3D5008A7FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA6EF5D92B2DF3D9008A7FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA6EF5DC2B2DF3D9008A7FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA6EF5E32B2DF419008A7FFF /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		EA6EF5E62B2DF463008A7FFF /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
+		EA6EF5E82B2DF487008A7FFF /* BasketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRepository.swift; sourceTree = "<group>"; };
+		EA6EF5F12B2DFA93008A7FFF /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		EAF405412B2E241C00EE4C95 /* ProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
+		EAF405452B2E248E00EE4C95 /* ProductOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewViewModel.swift; sourceTree = "<group>"; };
+		EAF405472B2E24FE00EE4C95 /* ProductOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewView.swift; sourceTree = "<group>"; };
+		EAF405492B2E252700EE4C95 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		EAF4054B2B2E2A5200EE4C95 /* FavoriteProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProductsRepository.swift; sourceTree = "<group>"; };
+		EAF4054E2B2E2B3000EE4C95 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +69,14 @@
 		EA6EF5D42B2DF3D5008A7FFF /* Bonprix */ = {
 			isa = PBXGroup;
 			children = (
+				EAF405432B2E246500EE4C95 /* Use Case */,
+				EAF405402B2E240A00EE4C95 /* Interactors */,
+				EA6EF5F02B2DFA81008A7FFF /* Models */,
+				EA6EF5E52B2DF444008A7FFF /* Repositories */,
 				EA6EF5D52B2DF3D5008A7FFF /* BonprixApp.swift */,
-				EA6EF5D72B2DF3D5008A7FFF /* ContentView.swift */,
 				EA6EF5D92B2DF3D9008A7FFF /* Assets.xcassets */,
 				EA6EF5DB2B2DF3D9008A7FFF /* Preview Content */,
+				EA6EF5E32B2DF419008A7FFF /* products.json */,
 			);
 			path = Bonprix;
 			sourceTree = "<group>";
@@ -65,6 +87,59 @@
 				EA6EF5DC2B2DF3D9008A7FFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA6EF5E52B2DF444008A7FFF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EA6EF5E62B2DF463008A7FFF /* ProductsRepository.swift */,
+				EA6EF5E82B2DF487008A7FFF /* BasketRepository.swift */,
+				EAF4054B2B2E2A5200EE4C95 /* FavoriteProductsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EA6EF5F02B2DFA81008A7FFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA6EF5F12B2DFA93008A7FFF /* Products.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAF405402B2E240A00EE4C95 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				EAF405412B2E241C00EE4C95 /* ProductsInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		EAF405432B2E246500EE4C95 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				EAF4054D2B2E2B1200EE4C95 /* Product Details */,
+				EAF405442B2E246E00EE4C95 /* Product Overview */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		EAF405442B2E246E00EE4C95 /* Product Overview */ = {
+			isa = PBXGroup;
+			children = (
+				EAF405452B2E248E00EE4C95 /* ProductOverviewViewModel.swift */,
+				EAF405472B2E24FE00EE4C95 /* ProductOverviewView.swift */,
+			);
+			path = "Product Overview";
+			sourceTree = "<group>";
+		};
+		EAF4054D2B2E2B1200EE4C95 /* Product Details */ = {
+			isa = PBXGroup;
+			children = (
+				EAF405492B2E252700EE4C95 /* ProductDetailView.swift */,
+				EAF4054E2B2E2B3000EE4C95 /* ProductDetailViewModel.swift */,
+			);
+			path = "Product Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6EF5E42B2DF419008A7FFF /* products.json in Resources */,
 				EA6EF5DD2B2DF3D9008A7FFF /* Preview Assets.xcassets in Resources */,
 				EA6EF5DA2B2DF3D9008A7FFF /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +213,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6EF5D82B2DF3D5008A7FFF /* ContentView.swift in Sources */,
+				EAF4054A2B2E252700EE4C95 /* ProductDetailView.swift in Sources */,
 				EA6EF5D62B2DF3D5008A7FFF /* BonprixApp.swift in Sources */,
+				EA6EF5E72B2DF463008A7FFF /* ProductsRepository.swift in Sources */,
+				EAF4054F2B2E2B3000EE4C95 /* ProductDetailViewModel.swift in Sources */,
+				EA6EF5F22B2DFA93008A7FFF /* Products.swift in Sources */,
+				EA6EF5E92B2DF487008A7FFF /* BasketRepository.swift in Sources */,
+				EAF4054C2B2E2A5200EE4C95 /* FavoriteProductsRepository.swift in Sources */,
+				EAF405462B2E248E00EE4C95 /* ProductOverviewViewModel.swift in Sources */,
+				EAF405422B2E241C00EE4C95 /* ProductsInteractor.swift in Sources */,
+				EAF405482B2E24FE00EE4C95 /* ProductOverviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
