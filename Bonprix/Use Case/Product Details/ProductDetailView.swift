@@ -12,6 +12,16 @@ struct ProductDetailView: View {
 
     var body: some View {
         VStack {
+            // Display selected variant image
+            AsyncImage(url: viewModel.imageUrl) { phase in
+                if let image = phase.image {
+                    image // Displays the loaded image.
+                } else if phase.error != nil {
+                    Color.red // Indicates an error.
+                } else {
+                    ProgressView()
+                }
+            }
             Text(viewModel.product.title)
                 .font(.title)
             Text(viewModel.product.description)
@@ -48,16 +58,7 @@ struct ProductDetailView: View {
                 .padding()
             }
 
-            // Display selected variant image
-            AsyncImage(url: viewModel.imageUrl) { phase in
-                if let image = phase.image {
-                    image // Displays the loaded image.
-                } else if phase.error != nil {
-                    Color.red // Indicates an error.
-                } else {
-                    Color.blue // Acts as a placeholder.
-                }
-            }
+
 
             // Add to Basket button
             Button(action: {
