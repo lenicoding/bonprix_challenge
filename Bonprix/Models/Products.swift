@@ -23,8 +23,16 @@ struct Product: Codable, Identifiable {
         case description, isAvailable, variants
     }
     
+    func priceString() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.currencySymbol = price.currency
+        numberFormatter.currencyDecimalSeparator = ","
+        return numberFormatter.string(for: price.value) ?? ""
+    }
+    
     static func dummyProduct() -> Product {
-        return Product(id: 123, title: "Dummy", price: Price(value: 12.34, currency: "€"), imageURL: "https://placehold.co/275x385", description: "Dummy product", isAvailable: true, variants: nil)
+        return Product(id: 123, title: "Dummy product mit langem namen", price: Price(value: 12.34, currency: "€"), imageURL: "https://placehold.co/275x385", description: "Dummy product", isAvailable: true, variants: nil)
     }
 }
 

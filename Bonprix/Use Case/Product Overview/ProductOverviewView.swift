@@ -9,20 +9,36 @@ import SwiftUI
 
 struct ProductOverviewView: View {
     @ObservedObject var viewModel: ProductOverviewViewModel
-
+    
     var body: some View {
         NavigationView {
-            List(viewModel.products) { product in
-                NavigationLink(destination: ProductDetailView(viewModel: ProductDetailViewModel(product: product, productsInteractor: viewModel.productsInteractor))) {
-                    Text(product.title)
-                        .foregroundColor(viewModel.isProductFavorite(productId: product.id) ? .blue : .black)
+            ScrollView {
+                LazyVGrid(columns: gridLayout(), spacing: 8) {
+                    ForEach(viewModel.products, id: \.id) { product in
+                        NavigationLink(destination: ProductDetailView(viewModel: ProductDetailViewModel(product: product, productsInteractor: viewModel.productsInteractor))) {
+                            ProductOverviewCardView(product: product)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
                 }
+                .navigationBarTitle("Produktübersicht")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationBarTitle("Product Overview")
+            .background {
+                Color.gray.opacity(0.3)
+                    .ignoresSafeArea()
+            }
+            .onAppear {
+                viewModel.fetchProducts()
+            }
         }
-        .onAppear {
-            viewModel.fetchProducts()
-        }
+        
+        
+    }
+    private func gridLayout() -> [GridItem] {
+        let itemCount = viewModel.products.count
+        let columns: [GridItem] = Array(repeating: .init(.flexible()), count: min(itemCount, 3))
+        return columns
     }
 }
 
