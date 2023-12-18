@@ -13,17 +13,19 @@ class ProductDetailViewModel: ObservableObject {
     @Published var product: Product
     @Published var selectedVariantIndex: Int = 0 {
         didSet {
-            updateProductImage()
+            updateProductVariantInformation()
         }
     }
     @Published var favoriteProduct: Bool = false
     @Published var imageUrl: URL?
+    @Published var availableProduct: Bool = false
 
     init(product: Product, productsInteractor: ProductsInteractor) {
         self.product = product
         self.productsInteractor = productsInteractor
         self.favoriteProduct = productsInteractor.isProductFavorite(productId: product.id)
         self.imageUrl = URL(string: product.imageURL)
+        self.availableProduct = product.isAvailable
 
         if let variants = product.variants, let variantIndex = variants.firstIndex(where: { $0.id == product.id }) {
             selectedVariantIndex = variantIndex
@@ -48,9 +50,10 @@ class ProductDetailViewModel: ObservableObject {
         }
     }
 
-    private func updateProductImage() {
+    private func updateProductVariantInformation() {
         if let variants = product.variants {
             self.imageUrl = URL(string: variants[selectedVariantIndex].imageURL)
+            self.availableProduct = variants[selectedVariantIndex].isAvailable
         }
     }
 }

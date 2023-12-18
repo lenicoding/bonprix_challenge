@@ -9,68 +9,91 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @ObservedObject var viewModel: ProductDetailViewModel
-
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var showingSheet: Bool = false
+    
     var body: some View {
         VStack {
-            // Display selected variant image
-            AsyncImage(url: viewModel.imageUrl) { phase in
-                if let image = phase.image {
-                    image // Displays the loaded image.
-                } else if phase.error != nil {
-                    Color.red // Indicates an error.
-                } else {
-                    ProgressView()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    AsyncImage(url: viewModel.imageUrl) { phase in
+                        if let image = phase.image {
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width:.infinity, height: .infinity)
+                                .clipped()
+                        } else if phase.error != nil {
+                            Color.red // Indicates an error.
+                        } else {
+                            ProgressView()
+                        }
+                    }
+                    
+                    ProductDetailInformationView(viewModel: viewModel)
                 }
             }
-            Text(viewModel.product.title)
-                .font(.title)
-            Text(viewModel.product.description)
-                .padding()
-
-            HStack {
-                Text("Price: \(viewModel.product.price.value) \(viewModel.product.price.currency)")
-                    .padding()
-
+            Group{
+                if viewModel.availableProduct {
+                    Button(action: {
+                        viewModel.addToBasket()
+                        showingSheet.toggle()
+                    }, label: {
+                        Text("In die Einkaufstasche")
+                            .foregroundColor(.white)
+                            .frame(height: 40)
+                            .frame(maxWidth:.infinity)
+                            .background(Color.black)
+                            .cornerRadius(10)
+                            .padding()
+                    })
+                    .sheet(isPresented: $showingSheet) {
+                        Text("In den Einkaufswagen hinzugefügt!")
+                            .presentationDetents([.fraction(0.25)])
+                    }
+                } else {
+                    Button(action: {
+                    }, label: {
+                        Text("Nicht verfügbar")
+                            .foregroundColor(.white)
+                            .frame(height: 40)
+                            .frame(maxWidth:.infinity)
+                            .background(Color.gray)
+                            .cornerRadius(10)
+                            .padding()
+                    })
+                }
+            }.frame(maxHeight: 60, alignment: .bottom)
+        }
+        .navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                backButton
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
                     viewModel.toggleFavoriteStatus()
+                    
                 }) {
                     Image(systemName: viewModel.favoriteProduct ? "heart.fill" : "heart")
-                        .foregroundColor(viewModel.favoriteProduct ? .blue : .gray)
+                        .foregroundColor(.black)
                 }
-                .padding()
-            }
-
-            // Display variant selection buttons if the product has variants
-            if let variants = viewModel.product.variants, variants.count > 0 {
-                HStack {
-                    ForEach(0..<variants.count, id: \.self) { index in
-                        Button(action: {
-                            viewModel.selectedVariantIndex = index
-                        }) {
-                            Text(variants[index].color)
-                                .padding()
-                        }
-                        .background(viewModel.selectedVariantIndex == index ? Color.blue : Color.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                    }
-                }
-                .padding()
-            }
-
-
-
-            // Add to Basket button
-            Button(action: {
-                // Assuming you have a method in the view model to add the selected variant to the basket
-                viewModel.addToBasket()
-            }) {
-                Text("Add to Basket")
-                    .padding()
             }
         }
-        .navigationBarTitle("Product Detail")
+        .toolbarBackground(.hidden, for: .navigationBar)
     }
+    
+    var backButton : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        HStack {
+            Image(systemName: "chevron.left") // BackButton Image
+                .foregroundColor(.black)
+        }
+    }
+    }
+    
 }
 
 #Preview {

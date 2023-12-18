@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA083C1F2B304BCB007CE3BD /* ProductDetailInformationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA083C1E2B304BCB007CE3BD /* ProductDetailInformationVIew.swift */; };
 		EA6EF5D62B2DF3D5008A7FFF /* BonprixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5D52B2DF3D5008A7FFF /* BonprixApp.swift */; };
 		EA6EF5DA2B2DF3D9008A7FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6EF5D92B2DF3D9008A7FFF /* Assets.xcassets */; };
 		EA6EF5DD2B2DF3D9008A7FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6EF5DC2B2DF3D9008A7FFF /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA083C1E2B304BCB007CE3BD /* ProductDetailInformationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInformationVIew.swift; sourceTree = "<group>"; };
 		EA6EF5D22B2DF3D5008A7FFF /* Bonprix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonprix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6EF5D52B2DF3D5008A7FFF /* BonprixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonprixApp.swift; sourceTree = "<group>"; };
 		EA6EF5D92B2DF3D9008A7FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				EAF405492B2E252700EE4C95 /* ProductDetailView.swift */,
 				EAF4054E2B2E2B3000EE4C95 /* ProductDetailViewModel.swift */,
+				EA083C1E2B304BCB007CE3BD /* ProductDetailInformationVIew.swift */,
 			);
 			path = "Product Details";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				EAE8497F2B2F743100BE474B /* ProductOverviewCardView.swift in Sources */,
 				EAF4054A2B2E252700EE4C95 /* ProductDetailView.swift in Sources */,
+				EA083C1F2B304BCB007CE3BD /* ProductDetailInformationVIew.swift in Sources */,
 				EA6EF5D62B2DF3D5008A7FFF /* BonprixApp.swift in Sources */,
 				EA6EF5E72B2DF463008A7FFF /* ProductsRepository.swift in Sources */,
 				EAF4054F2B2E2B3000EE4C95 /* ProductDetailViewModel.swift in Sources */,

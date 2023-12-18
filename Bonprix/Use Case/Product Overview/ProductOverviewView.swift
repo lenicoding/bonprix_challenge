@@ -22,6 +22,7 @@ struct ProductOverviewView: View {
                     }
                 }
                 .navigationBarTitle("Produktübersicht")
+                
                 .navigationBarTitleDisplayMode(.inline)
             }
             .background {
@@ -32,6 +33,7 @@ struct ProductOverviewView: View {
                 viewModel.fetchProducts()
             }
         }
+        .accentColor(.black)
         
         
     }
