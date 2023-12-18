@@ -24,7 +24,7 @@ struct ProductDetailView: View {
                                 .frame(width:.infinity, height: .infinity)
                                 .clipped()
                         } else if phase.error != nil {
-                            Color.red // Indicates an error.
+                            Color.red
                         } else {
                             ProgressView()
                         }

@@ -15,6 +15,7 @@
 		EA6EF5E72B2DF463008A7FFF /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5E62B2DF463008A7FFF /* ProductsRepository.swift */; };
 		EA6EF5E92B2DF487008A7FFF /* BasketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5E82B2DF487008A7FFF /* BasketRepository.swift */; };
 		EA6EF5F22B2DFA93008A7FFF /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EF5F12B2DFA93008A7FFF /* Products.swift */; };
+		EA7C75362B305FF200897CAB /* ButtonStyles+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7C75352B305FF200897CAB /* ButtonStyles+Custom.swift */; };
 		EAE8497F2B2F743100BE474B /* ProductOverviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8497E2B2F743100BE474B /* ProductOverviewCardView.swift */; };
 		EAF405422B2E241C00EE4C95 /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF405412B2E241C00EE4C95 /* ProductsInteractor.swift */; };
 		EAF405462B2E248E00EE4C95 /* ProductOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF405452B2E248E00EE4C95 /* ProductOverviewViewModel.swift */; };
@@ -34,6 +35,7 @@
 		EA6EF5E62B2DF463008A7FFF /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
 		EA6EF5E82B2DF487008A7FFF /* BasketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRepository.swift; sourceTree = "<group>"; };
 		EA6EF5F12B2DFA93008A7FFF /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		EA7C75352B305FF200897CAB /* ButtonStyles+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyles+Custom.swift"; sourceTree = "<group>"; };
 		EAE8497E2B2F743100BE474B /* ProductOverviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewCardView.swift; sourceTree = "<group>"; };
 		EAF405412B2E241C00EE4C95 /* ProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
 		EAF405452B2E248E00EE4C95 /* ProductOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewViewModel.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		EA6EF5D42B2DF3D5008A7FFF /* Bonprix */ = {
 			isa = PBXGroup;
 			children = (
-				EAF405432B2E246500EE4C95 /* Use Case */,
+				EAF405432B2E246500EE4C95 /* Feature */,
 				EAF405402B2E240A00EE4C95 /* Interactors */,
 				EA6EF5F02B2DFA81008A7FFF /* Models */,
 				EA6EF5E52B2DF444008A7FFF /* Repositories */,
@@ -111,6 +113,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EA7C75342B305FA700897CAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA083C1E2B304BCB007CE3BD /* ProductDetailInformationVIew.swift */,
+				EA7C75352B305FF200897CAB /* ButtonStyles+Custom.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EAE8497D2B2F72BC00BE474B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,13 +138,13 @@
 			path = Interactors;
 			sourceTree = "<group>";
 		};
-		EAF405432B2E246500EE4C95 /* Use Case */ = {
+		EAF405432B2E246500EE4C95 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
 				EAF4054D2B2E2B1200EE4C95 /* Product Details */,
 				EAF405442B2E246E00EE4C95 /* Product Overview */,
 			);
-			path = "Use Case";
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		EAF405442B2E246E00EE4C95 /* Product Overview */ = {
@@ -149,9 +160,9 @@
 		EAF4054D2B2E2B1200EE4C95 /* Product Details */ = {
 			isa = PBXGroup;
 			children = (
+				EA7C75342B305FA700897CAB /* Views */,
 				EAF405492B2E252700EE4C95 /* ProductDetailView.swift */,
 				EAF4054E2B2E2B3000EE4C95 /* ProductDetailViewModel.swift */,
-				EA083C1E2B304BCB007CE3BD /* ProductDetailInformationVIew.swift */,
 			);
 			path = "Product Details";
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 				EA6EF5E92B2DF487008A7FFF /* BasketRepository.swift in Sources */,
 				EAF4054C2B2E2A5200EE4C95 /* FavoriteProductsRepository.swift in Sources */,
 				EAF405462B2E248E00EE4C95 /* ProductOverviewViewModel.swift in Sources */,
+				EA7C75362B305FF200897CAB /* ButtonStyles+Custom.swift in Sources */,
 				EAF405422B2E241C00EE4C95 /* ProductsInteractor.swift in Sources */,
 				EAF405482B2E24FE00EE4C95 /* ProductOverviewView.swift in Sources */,
 			);
